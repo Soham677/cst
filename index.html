@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Craniosacral Therapy | Sri Sri Well Being</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #1a1a1a;
+      line-height: 1.6;
+      background: #ffffff;
+      scroll-behavior: smooth;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomSlow {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.05);
+      }
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1.2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(42, 127, 127, 0.08);
+      animation: slideDown 0.6s ease-out;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #1e5a5a;
+      letter-spacing: -0.5px;
+    }
+
+    .cta-register {
+      background: linear-gradient(135deg, #2a7f7f 0%, #1e5a5a 100%);
+      color: white;
+      padding: 0.85rem 2rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(42, 127, 127, 0.25);
+    }
+
+    .cta-register:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(42, 127, 127, 0.35);
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+      align-items: center;
+      background: white;
+    }
+
+    .hero-content {
+      padding: 6rem 5rem;
+      z-index: 2;
+    }
+
+    .hero-image {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      animation: zoomSlow 15s ease-in-out infinite alternate;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.8rem;
+      font-weight: 700;
+      line-height: 1.15;
+      color: #1a1a1a;
+      margin-bottom: 1.5rem;
+      animation: fadeInLeft 0.8s ease-out;
+    }
+
+    .hero .subheadline {
+      font-size: 1.15rem;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      max-width: 500px;
+      font-weight: 300;
+      animation: fadeInLeft 1s ease-out 0.1s backwards;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, #2a7f7f 0%, #1e5a5a 100%);
+      color: white;
+      padding: 1.1rem 2.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(42, 127, 127, 0.3);
+      animation: fadeInLeft 1.2s ease-out 0.2s backwards;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(42, 127, 127, 0.4);
+    }
+
+    /* Section Styles */
+    .section {
+      padding: 5rem 0;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .section-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 4rem;
+    }
+
+    .section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 3rem;
+      line-height: 1.2;
+    }
+
+    .section h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .benefit-card {
+      padding: 2.5rem 2rem;
+      background: #f8f8f8;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease-out backwards;
+    }
+
+    .benefit-card:nth-child(1) { animation-delay: 0.1s; }
+    .benefit-card:nth-child(2) { animation-delay: 0.2s; }
+    .benefit-card:nth-child(3) { animation-delay: 0.3s; }
+    .benefit-card:nth-child(4) { animation-delay: 0.4s; }
+    .benefit-card:nth-child(5) { animation-delay: 0.5s; }
+    .benefit-card:nth-child(6) { animation-delay: 0.6s; }
+
+    .benefit-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      background: white;
+    }
+
+    .benefit-card h4 {
+      color: #2a7f7f;
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .benefit-card p {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Instructor Section */
+    .instructor-section {
+      background: #f8f8f8;
+      padding: 5rem 0;
+    }
+
+    .instructor-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 4rem;
+    }
+
+    .instructor-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .instructor-image {
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+      animation: fadeInRight 0.8s ease-out;
+    }
+
+    .instructor-image img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .instructor-image:hover img {
+      transform: scale(1.01);
+    }
+
+    .instructor-content {
+      animation: fadeInLeft 0.8s ease-out;
+    }
+
+    .instructor-content h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .instructor-title {
+      font-size: 1.2rem;
+      color: #2a7f7f;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    .instructor-content p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Testimonials */
+    .testimonials-section {
+      background: white;
+      padding: 5rem 0;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .testimonial {
+      background: white;
+      border: 1px solid #e8e8e8;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease-out backwards;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .testimonial:nth-child(1) { animation-delay: 0.2s; }
+    .testimonial:nth-child(2) { animation-delay: 0.4s; }
+    .testimonial:nth-child(3) { animation-delay: 0.6s; }
+    .testimonial:nth-child(4) { animation-delay: 0.8s; }
+    .testimonial:nth-child(5) { animation-delay: 1s; }
+    .testimonial:nth-child(6) { animation-delay: 1.2s; }
+
+    .testimonial:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial:hover .testimonial-image {
+      transform: scale(1.05);
+    }
+
+    .testimonial-content {
+      padding: 2rem 1.8rem;
+    }
+
+    .testimonial p {
+      color: #555;
+      font-style: italic;
+      margin-bottom: 1.2rem;
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      color: #1a1a1a;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-role {
+      font-size: 0.85rem;
+      color: #2a7f7f;
+      font-weight: 500;
+      margin-top: 0.3rem;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      background: white;
+      padding: 5rem 0;
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 4rem;
+    }
+
+    .faq-image-showcase {
+      width: 100%;
+      height: 300px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 3rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .faq-image-showcase img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-image-showcase:hover img {
+      transform: scale(1.05);
+    }
+
+    .faq-item {
+      background: white;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.5s ease-out backwards;
+    }
+
+    .faq-item:nth-child(1) { animation-delay: 0.1s; }
+    .faq-item:nth-child(2) { animation-delay: 0.2s; }
+    .faq-item:nth-child(3) { animation-delay: 0.3s; }
+    .faq-item:nth-child(4) { animation-delay: 0.4s; }
+    .faq-item:nth-child(5) { animation-delay: 0.5s; }
+    .faq-item:nth-child(6) { animation-delay: 0.6s; }
+
+    .faq-item:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .faq-question {
+      padding: 1.8rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      color: #1a1a1a;
+      transition: all 0.3s ease;
+      background: white;
+      border: 1px solid #e8e8e8;
+    }
+
+    .faq-question:hover {
+      background: #f8f8f8;
+    }
+
+    .faq-toggle {
+      font-size: 1.2rem;
+      color: #2a7f7f;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      padding: 0 1.8rem;
+      color: #666;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding: 1.8rem;
+      background: #f8f8f8;
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(180deg);
+    }
+
+    /* Content Split */
+    .content-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin: 3rem 0;
+    }
+
+    .split-text {
+      animation: fadeInLeft 0.8s ease-out;
+    }
+
+    .split-image {
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      animation: fadeInRight 0.8s ease-out;
+    }
+
+    .split-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .split-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: white;
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-section h3 {
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-item {
+      margin-bottom: 1.2rem;
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .footer-item a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+
+    .footer-item a:hover {
+      color: #2a7f7f;
+    }
+
+    .footer-divider {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 0 4rem;
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 4rem;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem 2rem;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        display: none;
+      }
+
+      .hero-content {
+        padding: 3rem 2rem;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .content-split,
+      .instructor-split {
+        grid-template-columns: 1fr;
+      }
+
+      .section-container {
+        padding: 0 2rem;
+      }
+
+      .footer-grid {
+        padding: 0 2rem;
+      }
+
+      .footer-bottom {
+        padding: 2rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">Sri Sri Well Being</div>
+  <a href="https://tinyurl.com/SSW-CST-2026" class="cta-register">Register Now</a>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Master the Art of Healing Touch</h1>
+    <p class="subheadline">Learn Biodynamic Craniosacral Therapy from master practitioners. A 15-month immersive program blending ancient wisdom with modern science, guided by Gurudev Sri Sri Ravi Shankar's vision.</p>
+    <a href="https://tinyurl.com/SSW-CST-2026" class="cta-button">Start Your Journey</a>
+  </div>
+  <div class="hero-image" style="background-image: url('KG9A7320 (1).jpg');"></div>
+</section>
+
+<!-- Gurudev's Vision Section -->
+<section class="section" style="background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%); position: relative;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.08; background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 60 60%22><rect x=%225%22 y=%225%22 width=%2250%22 height=%2250%22 fill=%22none%22 stroke=%22%232a7f7f%22 stroke-width=%220.5%22/></svg>'); background-size: 60px 60px; pointer-events: none;"></div>
+  <div class="section-container" style="position: relative;">
+    <h2 style="text-align: center; margin-bottom: 3rem;">Gurudev's Vision for Healing</h2>
+
+    <div class="content-split">
+      <div class="split-text">
+        <h3>The Inspiration Behind Sri Sri Well Being</h3>
+        <p style="color: #555; margin: 1.5rem 0; line-height: 1.8;">Gurudev Sri Sri Ravi Shankar is a universally revered spiritual and humanitarian leader. His vision of a violence-free, stress-free society through the reawakening of human values has inspired millions to broaden their spheres of responsibility and work towards the betterment of the world.</p>
+
+        <p style="color: #555; margin: 1.5rem 0; line-height: 1.8;">This vision forms the foundation of Sri Sri Well Being. We believe that true healing extends beyond the individual body—it transforms consciousness, restores balance, and contributes to creating a more compassionate world. Every student who learns craniosacral therapy becomes an instrument of Gurudev's larger vision.</p>
+
+        <p style="color: #555; margin: 1.5rem 0; line-height: 1.8;">When you learn from us, you're not just gaining a profession. You're becoming part of a global movement dedicated to healing humanity—one person, one touch, one moment of presence at a time.</p>
+      </div>
+      <div class="split-image">
+        <img src="Sri_Sri_Ravi_Shankar_-_new.jpg" alt="Gurudev Sri Sri Ravi Shankar">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What Awaits You Section -->
+<section class="section" style="background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%); position: relative;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.06; background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22><circle cx=%2210%22 cy=%2210%22 r=%221%22 fill=%22%232a7f7f%22/><circle cx=%2230%22 cy=%2210%22 r=%221%22 fill=%22%232a7f7f%22/><circle cx=%2210%22 cy=%2230%22 r=%221%22 fill=%22%232a7f7f%22/><circle cx=%2230%22 cy=%2230%22 r=%221%22 fill=%22%232a7f7f%22/></svg>'); background-size: 40px 40px; pointer-events: none;"></div>
+  <div class="section-container" style="position: relative;">
+    <h2>What Awaits You</h2>
+
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <h4>Release Deep Trauma</h4>
+        <p>Master techniques to help clients release stored trauma and emotional disturbances at the root level.</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Heal Chronic Pain</h4>
+        <p>Address musculoskeletal, nervous, and immune system imbalances underlying chronic conditions.</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Become a Skilled Healer</h4>
+        <p>Develop hands-on ability to read the body and bring balance through conscious, healing touch.</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Embody Spiritual Practice</h4>
+        <p>Integrate ancient Indian wisdom with modern healing science for a holistic approach to wellness.</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Join Global Community</h4>
+        <p>Be part of an exclusive network of practitioners trained in the world's only integrated program.</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Gain Certification</h4>
+        <p>Receive recognized IABT credentials with internship and placement opportunities at Sri Sri centers worldwide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Meet Your Instructor Section -->
+<section class="instructor-section">
+  <div class="instructor-container">
+    <div class="instructor-split">
+      <div class="instructor-image">
+        <img src="KG9A7320 (1).jpg" alt="Dr. Ankita Dhelia">
+      </div>
+      <div class="instructor-content">
+        <h2>Meet Dr. Ankita Dhelia</h2>
+        <p class="instructor-title">Founder & Lead Instructor</p>
+        <p>Dr. Ankita Dhelia is a renowned craniosacral therapy practitioner and spiritual healer dedicated to transforming lives through the art and science of touch. With years of rigorous training in biodynamic craniosacral therapy and deep study of classical osteopathic texts, she has dedicated her life to creating a bridge between ancient healing wisdom and modern therapeutic science.</p>
+        <p>Inspired by Gurudev Sri Sri Ravi Shankar's vision of a stress-free, violence-free world, Dr. Ankita founded Sri Sri Well Being to train the next generation of compassionate, competent healers. Her unique approach integrates the best practices of biodynamic and biomechanical craniosacral therapy with the spiritual principles rooted in Indian tradition.</p>
+        <p>Under her guidance, students don't just learn technique—they learn to embody healing as a spiritual practice, becoming practitioners who heal not just the body, but the whole being.</p>
+        <a href="https://tinyurl.com/SSW-CST-2026" class="cta-button">Learn From Dr. Ankita</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Program Overview Section -->
+<section class="section" style="background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%); position: relative;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.05; background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><line x1=%220%22 y1=%2250%22 x2=%22100%22 y2=%2250%22 stroke=%22%232a7f7f%22 stroke-width=%220.5%22/><line x1=%2250%22 y1=%220%22 x2=%2250%22 y2=%22100%22 stroke=%22%232a7f7f%22 stroke-width=%220.5%22/></svg>'); background-size: 100px 100px; pointer-events: none;"></div>
+  <div class="section-container" style="position: relative;">
+    <h2>Program Overview</h2>
+    <div class="content-split">
+      <div class="split-text">
+        <h3>8 Seminars • 15 Months • Life-Changing</h3>
+        <p style="color: #666; margin: 1.5rem 0; line-height: 1.8;">Our comprehensive program consists of 8 seminars of 5 days each, spread over 15 months, starting August 2026. This includes 6 in-person seminars at our world-class campus and 2 online seminars for flexibility.</p>
+        <p style="color: #666; margin: 1.5rem 0; line-height: 1.8;"><strong>Campus Location:</strong><br>Art of Living International Center<br>21 km Kanakapura Road<br>Udayapura, Bengaluru – 560082</p>
+        <p style="color: #666; margin: 1.5rem 0; line-height: 1.8;">Our training meets International Association of Biodynamic Therapy (IABT) standards and prepares graduates to practice safely, ethically, and competently.</p>
+      </div>
+      <div class="split-image">
+        <img src="DSC00254.JPG" alt="Training in progress">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who Should Apply -->
+<section class="section" style="background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%); position: relative;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.07; background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 80 80%22><line x1=%220%22 y1=%220%22 x2=%2280%22 y2=%220%22 stroke=%22%232a7f7f%22 stroke-width=%220.5%22/><line x1=%220%22 y1=%2240%22 x2=%2280%22 y2=%2240%22 stroke=%22%232a7f7f%22 stroke-width=%220.5%22/><line x1=%220%22 y1=%2280%22 x2=%2280%22 y2=%2280%22 stroke=%22%232a7f7f%22 stroke-width=%220.5%22/></svg>'); background-size: 80px 80px; pointer-events: none;"></div>
+  <div class="section-container" style="position: relative;">
+    <h2>Who Should Apply</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <h4>Healthcare Professionals</h4>
+        <p>Doctors, physiotherapists, nurses seeking to expand their healing toolkit.</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Yoga & Wellness Teachers</h4>
+        <p>Instructors and coaches integrating hands-on healing into their practice.</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Therapists & Bodyworkers</h4>
+        <p>Massage therapists and practitioners in touch-based healing modalities.</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Spiritual Seekers</h4>
+        <p>Those on a spiritual path deepening practice through healing work.</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Career Changers</h4>
+        <p>Seeking meaningful careers in healing and wellness—no prior experience required.</p>
+      </div>
+      <div class="benefit-card">
+        <h4>Personal Growth</h4>
+        <p>Exploring personal transformation and body-mind connection deeply.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section" style="background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%); position: relative;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.06; background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 50 50%22><rect x=%222%22 y=%222%22 width=%2246%22 height=%2246%22 fill=%22none%22 stroke=%22%232a7f7f%22 stroke-width=%220.5%22 opacity=%220.4%22/></svg>'); background-size: 50px 50px; pointer-events: none;"></div>
+  <div class="section-container" style="position: relative;">
+    <h2>From Our Graduates</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <img src="Rob-Cornelissen.jpg" alt="Rob Cornelissen" class="testimonial-image">
+        <div class="testimonial-content">
+          <p>"With Craniosacral Therapy I learned a beautiful and powerful way to help people with physical and mental issues.
+Learning and practicing CST has been an incredible journey for me. I experienced tremendous self development. I have switched my career path from a “home loan expert” to a practicing therapist. 
+I strongly recommend you to study for and become a Craniosacral Therapist; for yourself, your loved ones and for the world."</p>
+          <div class="testimonial-author">Rob Cornelissen</div>
+          <div class="testimonial-role">PACT Certified Craniosacral Therapist, Australia</div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <img src="Nisheeta-150.jpg" alt="Nisheeta Bajaj Jannsen" class="testimonial-image">
+        <div class="testimonial-content">
+          <p>"A CST session with Dinesh is one of the most deeply relaxing experiences ever. In just 45 minutes, I felt different muscles deeply relax.
+After the session, there is a stillness of a different kind, that is rather indescribable. It complements and enhances ones meditation practices as well.
+CST seems to be a unique confluence of very refined knowledge of the body and the mind along with a magic touch – making the experience memorable!"</p>
+          <div class="testimonial-author">Nisheeta Bajaj Jannsen</div>
+          <div class="testimonial-role">Executive coach to CEOs, Author</div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <img src="Shilpa-Sudarshan.jpg" alt="Shilpa Sudarshan" class="testimonial-image">
+        <div class="testimonial-content">
+          <p>"I am a software engineer and I had my doubts about being able to learn a “medical” technique like CST. Even so, I signed up and I am really happy I did. 
+The program is well structured and brilliantly taught. Even though I am from a completely different background, to my delight, I was able to understand everything. 
+Doing this program dramatically improved my own health and gave me the ability to help others as well. All my clients have had amazing experiences with CST."</p>
+          <div class="testimonial-author">Shilpa Sudarshan</div>
+          <div class="testimonial-role">Software Professional and Craniosacral Therapist</div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <img src="Shanaya-150.jpg" alt="Shanaya Yadav" class="testimonial-image">
+        <div class="testimonial-content">
+          <p>"I have always been interested in learning new things and being financially independent. When I got the chance to learn CST, I jumped for it and I am so glad I did. 
+I am now a mom of a beautiful baby boy and I can see how giving him CST helps and makes him feel so settled and comfortable.
+It’s nice that I can earn money through sessions that I occasionally give as well.
+"</p>
+          <div class="testimonial-author">Shanaya Yadav</div>
+          <div class="testimonial-role">Proud Mom & Craniosacral Therapist</div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <img src="Anjali-Solanki.jpg" alt="Anjali Solanki" class="testimonial-image">
+        <div class="testimonial-content">
+          <p>"Doing CranioSacral Therapy training with Sri Sri Tattva Center of Healing Arts was one of the best decisions I made in the last few years.
+I highly recommend this course not only for all of the amazing scholastic learning, but also for the enormous amount of self-healing & personal development that occurs while participating in this course.
+CST has helped me bring such beautiful transformations in so many people’s lives."</p>
+          <div class="testimonial-author">Anjali Solanki</div>
+          <div class="testimonial-role">Health & Wellness Coach</div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <img src="Ishan-Shah.jpg" alt="Ishan Shah" class="testimonial-image">
+        <div class="testimonial-content">
+          <p>"Learning from Sri Sri Tattva Centre of Healing Arts has been a fantastic experience.
+The learning environment was nurturing and their teaching style made even advanced concepts simple to grasp.
+CST complements my Yoga teaching and I have been able to help many of my clients. Thanks."</p>
+          <div class="testimonial-author">Ishan Shah</div>
+          <div class="testimonial-role">Yoga Instructor</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section" style="background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%); position: relative;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.07; background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 60 60%22><circle cx=%2210%22 cy=%2210%22 r=%221.5%22 fill=%22%232a7f7f%22 opacity=%220.3%22/><circle cx=%2230%22 cy=%2230%22 r=%221.5%22 fill=%22%232a7f7f%22 opacity=%220.3%22/><circle cx=%2250%22 cy=%2210%22 r=%221.5%22 fill=%22%232a7f7f%22 opacity=%220.3%22/></svg>'); background-size: 60px 60px; pointer-events: none;"></div>
+  <div class="faq-container" style="position: relative;">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-image-showcase">
+      <img src="IMG-20190710-WA0027.jpg" alt="Training in progress">
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Who is this course for?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>This course is for anyone called to the healing arts—healthcare professionals, yoga teachers, therapists, or anyone seeking personal transformation. No prior experience necessary.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Do I need prior experience in healing or medicine?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>No. Our curriculum is designed to teach from the foundation up. Whether you're new to healing arts or experienced, you'll gain deep knowledge and hands-on skill.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What will I learn and practice?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>You'll master craniosacral anatomy and physiology, hands-on assessment and treatment techniques, nervous system work, trauma-informed practice, and the spiritual principles underlying healing.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How long is the program and what's the schedule?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>15 months consisting of 8 seminars of 5 days each (starting August 2026). This includes 6 in-person seminars and 2 online seminars.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Will I be certified?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes. Upon completion, you receive a certificate in Biodynamic Craniosacral Therapy. You'll be part of our global network with internship and placement opportunities at Sri Sri Wellbeing centers.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What makes Sri Sri Well Being unique?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>We're the only school blending classical osteopathy and craniosacral therapy with Indian spiritual tradition, inspired by Gurudev Sri Sri Ravi Shankar. We create compassionate healers, not just skilled technicians.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="section" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a7f7f 100%); color: white; text-align: center;">
+  <div class="section-container">
+    <h2 style="color: white; font-size: 3rem;">Ready to Transform?</h2>
+    <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; max-width: 600px; margin: 1.5rem auto 2.5rem; line-height: 1.8;">Join a global community of practitioners. Learn from Dr. Ankita Dhelia and become part of a movement inspired by Gurudev's vision.</p>
+    <a href="https://tinyurl.com/SSW-CST-2026" class="cta-button" style="background: white; color: #1a1a1a;">Express Your Interest</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-section">
+      <h3>Campus Location</h3>
+      <div class="footer-item">
+        <strong>Art of Living International Center</strong><br>
+        21 km, Kanakapura Road<br>
+        Udayapura, Bengaluru – 560082<br>
+        India
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <div class="footer-item">
+        <strong>Email</strong><br>
+        <a href="mailto:cst@srisritattva.com">cst@srisritattva.com</a>
+      </div>
+      <div class="footer-item">
+        <strong>Phone</strong><br>
+        <a href="tel:+918826384004">+91 8826384004</a><br>
+        <a href="tel:+919880319658">+91 9880319658</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Apply</h3>
+      <div class="footer-item">
+        <a href="https://tinyurl.com/SSW-CST-2026"><strong>Interest Form</strong></a>
+        <p style="margin-top: 0.5rem; color: rgba(255, 255, 255, 0.7);">8 Seminars • 15 Months<br>Starting August 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    <p><strong>Sri Sri Well Being</strong></p>
+    <p>Master Craniosacral Therapy Program<br>Blending ancient wisdom with modern healing science<br>Guided by Gurudev Sri Sri Ravi Shankar</p>
+    <p style="margin-top: 1.5rem;">© 2026 Sri Sri Well Being. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // FAQ Accordion
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', function() {
+      const faqItem = this.parentElement;
+      const isActive = faqItem.classList.contains('active');
+
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+
+      if (!isActive) {
+        faqItem.classList.add('active');
+      }
+    });
+  });
+
+  // Smooth scroll for links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
